@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="CSS/Agency.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <!-- There isn't too much javaScript so I didn't bother making it external
+            This website helped me with all js: http://www.aspsnippets.com/Articles/Show-Hide-DIV-with-TextBox-based-on-RadioButton-selection-checked-unchecked-using-JavaScript-and-jQuery.aspx -->
+        
+        <script>
+            function myFunction() 
+            {
+                var x = document.getElementById("myCheck");
+                x.checked = true;
+            }
+            
+            function ShowHideDiv() 
+            {
+                var chkYes = document.getElementById("chkYes");
+                var popDown = document.getElementById("popDown");
+                popDown.style.display = chkYes.checked ? "block" : "none";
+            }
+            
+            function Poppy() 
+            {
+                var chkYes1 = document.getElementById("chkYes1");
+                var popDown1 = document.getElementById("popDown1");
+                popDown1.style.display = chkYes1.checked ? "block" : "none";
+            }
+            
+            function Downie() 
+            {
+                var chkYes2 = document.getElementById("chkYes2");
+                var popDown2 = document.getElementById("popDown2");
+                popDown2.style.display = chkYes2.checked ? "block" : "none";
+            }
+            
+            function BigTest() 
+            {
+                var chkYes3 = document.getElementById("chkYes3");
+                var popDown3 = document.getElementById("popDown3");
+                popDown3.style.display = chkYes3.checked ? "block" : "none";
+                var chkNo3 = document.getElementById("chkNo3");
+                var popUp3 = document.getElementById("popUp3");
+                popUp3.style.display = chkNo3.checked ? "block" : "none";
+            }
+            
+            function BigTest2() 
+            {
+                var chkYes4 = document.getElementById("chkYes4");
+                var popDown4 = document.getElementById("popDown4");
+                popDown4.style.display = chkYes4.checked ? "block" : "none";
+                var chkNo4 = document.getElementById("chkNo4");
+                var popUp4 = document.getElementById("popUp4");
+                popUp4.style.display = chkNo4.checked ? "block" : "none";
+            }
+            
+            function BigTest3() 
+            {
+                var chkYes5 = document.getElementById("chkYes5");
+                var popDown5 = document.getElementById("popDown5");
+                popDown5.style.display = chkYes5.checked ? "block" : "none";
+                var chkNo5 = document.getElementById("chkNo5");
+                var popUp5 = document.getElementById("popUp5");
+                popUp5.style.display = chkNo5.checked ? "block" : "none";
+            }
+            
+            function BigTest4() 
+            {
+                var chkYes6 = document.getElementById("chkYes6");
+                var popDown6 = document.getElementById("popDown6");
+                popDown6.style.display = chkYes6.checked ? "block" : "none";
+                var chkNo6 = document.getElementById("chkNo6");
+                var popUp6 = document.getElementById("popUp6");
+                popUp6.style.display = chkNo6.checked ? "block" : "none";
+            }
+            
+            function BigTest5() 
+            {
+                var chkYes7 = document.getElementById("chkYes7");
+                var popDown7 = document.getElementById("popDown7");
+                popDown7.style.display = chkYes7.checked ? "block" : "none";
+                var chkNo7 = document.getElementById("chkNo7");
+                var popUp7 = document.getElementById("popUp7");
+                popUp7.style.display = chkNo7.checked ? "block" : "none";
+            }
+            
+            function BigTest6() 
+            {
+                var chkYes8 = document.getElementById("chkYes8");
+                var popDown8 = document.getElementById("popDown8");
+                popDown8.style.display = chkYes8.checked ? "block" : "none";
+                var chkNo8 = document.getElementById("chkNo8");
+                var popUp8 = document.getElementById("popUp8");
+                popUp8.style.display = chkNo8.checked ? "block" : "none";
+            }
+            
+        </script>
+
+        <!-- This is the only form -->
+        <form id="drivers" style="margin: 10px;">
+            <fieldset>
+                <legend>
+                    Drivers Licence Number <!-- This is section 1 question 1 -->
+                </legend>
+                <div id="question">
+                    <h1 id="title">1. What is your New Zealand drivers licence number?:</h1>  <input type="text" name="box" maxlength="1" size="1"> <input type="text" name="box" maxlength="1" size="1"> <input type="text" name="box" maxlength="1" size="1"> <input type="text" name="box" maxlength="1" size="1"> <input type="text" name="box" maxlength="1" size="1"> <input type="text" name="box" maxlength="1" size="1"> <input type="text" name="box" maxlength="1" size="1"> <input type="text" name="firstname" maxlength="1" size="1">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Name <!-- This is section 2 containing quesions 2, 3 amd 4 -->
+                </legend>
+                <div id="question">
+                    <h1 id="title">2. What is your name?:</h1><br>
+                    Surname:<br>
+                    <input type="text" name="firstname"><br>
+                    Full first name:<br>
+                    <input type="text" name="firstname"><br>
+                    Middle names:<br>
+                    <input type="text" name="middlenames"><br>
+                    
+                    <h1 id="title">3. Are the names on this application form different from the names shown on any of your supporting identification? (including any driver licence)?</h1>
+                    <label for="chkNo">
+                        <input type="checkbox" id="chkNo" name="chkNo" onclick="ShowHideDiv()" />
+                        No
+                        </label>
+                    <label for="chkYes">
+                    <input type="checkbox" id="chkYes" name="chkYes" onclick="ShowHideDiv()" />
+                        Yes
+                    </label>
+                        <div id="popDown" style="display: none">
+                                &rarr;
+                            <input type="text" id="txtNumber" />
+                        </div>
+                    <h1 id="title">4. Are you?</h1> <input type="checkbox" name="Male" id="myCheck">Male
+                    <input type="checkbox" name="female" id="myCheck">Female<br>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Organ Donation <!-- This is section 3 containing question 5 -->
+                </legend>
+                <div id="question">
+                    <h1 id="title">5. Would you be willing to donate organs in the event of your death?</h1> <input type="checkbox" name="no" id="myCheck">No <input type="checkbox" name="yes" id="myCheck">Yes<br>
+                    If you answer yes in the event of your death your next-of-kin will be asked for their agreement to donate organs. Please let them know of your wishes.
+                </div>
+            </fieldset>
+             <fieldset>
+                 <legend>
+                     Birth Date <!-- This is section 4 containing questions 6, 7 -->
+                 </legend>
+                     <div id="question">
+                        <h1 id="title">6. What is your date of birth? </h1><input type="date" name="vehicle" value=""><br>
+                        <h1 id="title">7. Where were you born?</h1><br>
+                        Town/City<input type="text" name="town"> Country<input type="text" name="country">
+                    </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Address <!-- This is section 5 containing questions 8,9,10 and 11 -->
+                </legend>
+                <div id="question">
+                    <h1 id="title">8. Would you like your address printed on your licence?</h1><br>
+                    <label for="tickNo1">
+                        <input type="radio" id="tickNo1" name="popDown1" onclick="Poppy()" />
+                        No
+                        </label>
+                    <label for="chkYes1">
+                    <input type="radio" id="chkYes1" name="popDown1" onclick="Poppy()" />
+                        Yes
+                    </label>
+                        <div id="popDown1" style="display: none">
+                                &rarr;
+                            <input type="radio" name="howFound1" value="Physical"> Phsyical Address
+                            <input type="radio" name="howFound1" value="Mailing"> Mailing Address
+                        </div>
+
+                    <h1 id="title">9. Where do you live?</h1><br>
+                    <textarea rows="4" cols="40"></textarea>
+
+                    <h1 id="title">10. What is your mailing address? (if different from above)</h1><br>
+                    <textarea rows="4" cols="40"></textarea>
+
+                    <h1 id="title">11. What are your contact telephone number(s)?</h1> <br>
+                    Home/Mobile<input type="text" name="box"> Work<input type="text" name="box">
+                </div>
+                <div id="info">
+                    <p>Giving your telephone number(s)is optional.</p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Licence and Class Type <!-- This is section 6 containing question 12 -->
+                </legend>
+                <div id="question">
+                    <h1 id="title">12. What Type of Licence are you applying for?</h1><br>
+                    <table id="table1">
+                  <tr>
+                    <td>Class 1 &rarr;<input type="checkbox" name="vehicle" id="myCheck"></td>
+                    <td>Learner Licence or <input type="checkbox" name="vehicle" id="myCheck"></td>
+                    <td>Restricted Licence or <input type="checkbox" name="vehicle" id="myCheck"></td>
+                    <td>Full Licence <input type="checkbox" name="vehicle" id="myCheck"></td>
+                  </tr> 
+                  <tr>
+                    <td>Class 2 &rarr;<input type="checkbox" name="vehicle" id="myCheck"></td>
+                    <td>Learner Licence or <input type="checkbox" name="vehicle" id="myCheck"></td>
+                    <td>        </td>
+                    <td>Full Licence <input type="checkbox" name="vehicle" id="myCheck"></td>
+                  </tr>
+                  <tr>
+                      <td>Class 3 &rarr;<input type="checkbox" name="vehicle" id="myCheck"></td>
+                      <td>Learner Licence or <input type="checkbox" name="vehicle" id="myCheck"></td>
+                      <td>      </td>
+                      <td>Full Licence <input type="checkbox" name="vehicle" id="myCheck"></td>
+                  </tr>
+                     <tr>
+                      <td>class 4 &rarr;<input type="checkbox" name="vehicle" id="myCheck"></td>
+                      <td>Learner Licence or <input type="checkbox" name="vehicle" id="myCheck"></td>
+                      <td>      </td>
+                      <td>Full Licence <input type="checkbox" name="vehicle" id="myCheck"></td>
+                  </tr>
+                  <tr>
+                      <td>Class 5 &rarr;<input type="checkbox" name="vehicle" id="myCheck"></td>
+                      <td>Learner Licence or <input type="checkbox" name="vehicle" id="myCheck"></td>
+                      <td>      </td>
+                      <td>Full Licence <input type="checkbox" name="vehicle" id="myCheck"></td>
+                  </tr> 
+                    <tr>
+                      <td>Class 6 &rarr;<input type="checkbox" name="vehicle" id="myCheck"></td>
+                      <td>Learner Licence or <input type="checkbox" name="vehicle" id="myCheck"></td>
+                      <td>Restricted Licence or <input type="checkbox" name="vehicle" id="myCheck"></td>
+                      <td>Full Licence <input type="checkbox" name="vehicle" id="myCheck"></td>
+                  </tr>
+            </table>
+                </div>
+                 <div id="info">
+                    <p>Tick boxes as required
+                    <p>Information about learner,restricted and full licence types can be found in The official New Zealand road code
+                    </p>
+                </div>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Licence Class, Type and Condition <!-- This is section 7 containing question 13 -->
+                    </legend>
+                    
+                    <div id="question">
+                    <h1 id="title">13. Have you completed an approved advanced driving skills course to reduce the time between your class 1 (car) restricted and full licence?</h1><br>
+                        <label for="chkNo2">
+                            <input type="checkbox" id="chkNo2" name="chkNo2" onclick="Downie()" />
+                                No
+                        </label>
+                    <label for="chkYes2">
+                        <input type="checkbox" id="chkYes2" name="chkYes2" onclick="Downie()" />
+                            Yes
+                    </label>
+                        <div id="popDown2" style="display: none">
+                                &rarr; You must present the certificate with this application.
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Medical Fitness <!-- This is section 8 containing questions 14, 15, 16, 17, 18 and 19 -->
+                    </legend>
+                    <div id="question">
+                        
+                        <h1 id="title">14. Do you have a medical condition that could affect your ability to drive safely?</h1><br>
+                        <label for="chkNo3">
+                            <input type="checkbox" id="chkNo3" name="chkNo3" onclick="BigTest()" />
+                            No
+                        </label><br>
+                        
+                        <div id="popUp3" style="display: none">
+                                &rarr; Go to question 19.
+                        </div>
+                        <label for="chkYes3">
+                            <input type="checkbox" id="chkYes3" name="chkYes3" onclick="BigTest()" />
+                            Yes
+                        </label><br>
+                        
+                            <div id="popDown3" style="display: none">
+                                &rarr; Go to question 15.
+                            </div>
+                        
+                        <h1 id="title">15. Has that medical condition affected your ability to drive safely in the last five years?</h1><br>
+                            
+                        <label for="chkNo4">
+                            <input type="checkbox" id="chkNo4" name="chkNo4" onclick="BigTest2()" />
+                            No
+                        </label><br>
+                        
+                        <div id="popUp4" style="display: none">
+                                &rarr; Go to question 19.
+                        </div>
+                        <label for="chkYes4">
+                            <input type="checkbox" id="chkYes4" name="chkYes4" onclick="BigTest2()" />
+                            Yes
+                        </label><br>
+                            <div id="popDown4" style="display: none">
+                                &rarr; Go to question 16.
+                            </div>
+                        
+                        <h1 id="title">16. Have you provided a medical certificate* in the last five years?</h1><br>
+                        
+                        <label for="chkNo5">
+                            <input type="checkbox" id="chkNo5" name="chkNo5" onclick="BigTest3()" />
+                            No
+                        </label><br>
+                        
+                        <div id="popUp5" style="display: none">
+                                &rarr; You must provide a new medical certificate. Go to question 20.
+                        </div>
+                        <label for="chkYes5">
+                            <input type="checkbox" id="chkYes5" name="chkYes5" onclick="BigTest3()" />
+                            Yes
+                        </label><br>
+                            <div id="popDown5" style="display: none">
+                                &rarr; Go to question 17.
+                            </div>
+                        
+                        <h1 id="title">17. Are your medical conditions worse than when you provided the medical certificate?</h1><br>
+                        
+                        <label for="chkNo6">
+                            <input type="checkbox" id="chkNo6" name="chkNo6" onclick="BigTest4()" />
+                            No
+                        </label><br>
+                        
+                        <div id="popUp6" style="display: none">
+                                &rarr;  Go to question 18.
+                        </div>
+                        <label for="chkYes6">
+                            <input type="checkbox" id="chkYes6" name="chkYes6" onclick="BigTest4()" />
+                            Yes
+                        </label><br>
+                            <div id="popDown6" style="display: none">
+                                &rarr; You must provide a new medical certificate. Go to question 20.
+                            </div>
+                        
+                        
+                        <h1 id="title">18. Have you been diagnosed with a new medical condition that could affect your ability to drive safely since you provided the medical certificate?</h1><br>
+                        
+                        <label for="chkNo7">
+                            <input type="checkbox" id="chkNo7" name="chkNo7" onclick="BigTest5()" />
+                            No
+                        </label><br>
+                        
+                        <div id="popUp7" style="display: none">
+                                &rarr;  Go to question 19.
+                        </div>
+                        <label for="chkYes7">
+                            <input type="checkbox" id="chkYes7" name="chkYes7" onclick="BigTest5()" />
+                            Yes
+                        </label><br>
+                            <div id="popDown7" style="display: none">
+                                &rarr; You must provide a new medical certificate. Go to question 19.
+                            </div>
+                
+                        <h1 id="title">19. Are you turning 75 years of age or older?</h1><br>
+                        
+                        <label for="chkNo8">
+                            <input type="checkbox" id="chkNo8" name="chkNo8" onclick="BigTest6()" />
+                            No
+                        </label><br>
+                        
+                        <div id="popUp8" style="display: none">
+                                &rarr;  You don't need a medical certificate. Go to question 20.
+                        </div>
+                        <label for="chkYes8">
+                            <input type="checkbox" id="chkYes8" name="chkYes8" onclick="BigTest6()" />
+                            Yes
+                        </label><br>
+                            <div id="popDown8" style="display: none">
+                                &rarr; You must provide a new medical certificate. Go to question 20.
+                        </div>
+                    </div>
+                    <div id="info">
+                        <p>See the Medical certificate section on page 4 to determine if you require a medical certificate.
+                        
+                        <p>Examples of medical conditions that could adversely affect your ability to drive include: diabetes, double vision, Alzheimers, epilepsy, fits, head or spinal injuries, high blood pressure, amputations, mental illness, joints or limb problems, stroke, convulsions
+                        
+                        <p> Medication and treatments can also affect your ability to drive safely.
+                            
+                        <p>*Your medical certificate must have been for the same medical standard as the classe(es) you are applying for now.
+                            •Classes 1 and 6 and D, F, R, T and W endorsments are the same medical standard.
+                            •Classes 2, 3, 4 and 5 and P, V, I and O endorsements are the same medical standard.
+                        
+                        <p>Medical certificates must not be more than 60 days old.
+                        </p>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Eye Sight <!-- This is section 9 containing question 20 -->
+                    </legend>
+                    <div id="question">
+                        <h1 id="title">20. Do you wear glasses or contact lenses for driving?</h1> <input type="checkbox" name="no" id="myCheck">No   <input type="checkbox" name="yes" id="myCheck">Yes
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Declaration <!-- This is the final section -->
+                    </legend>
+                    <div id="question">
+                        I state that, to my best knowledge and belief, my licence is not currently suspended or revoked, and/or that I am not disqualified from obtaining or holding a driver licence. I state that, to my best knowledge and belief, all the information I have given for this application is correct.<br>
+                    
+                        I further declare that the medical fitness information provided above is true and accurate <br><br>
+                        <h1 id="title">Signature of Applicant</h1><br>
+                        <textarea rows="2" cols="20"></textarea> <input type="date" name="date" value="dd/mm/yyyy">
+                    </div>
+                </fieldset>
+            </form>
+            <input type="submit" value="Submit" id="submit"><!-- The submit button -->
+        </body>
+</html>
